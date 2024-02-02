@@ -19,7 +19,7 @@
     <p>To get the project up and running on your local machine, follow these steps:</p>
     <ol>
         <li>First, clone the repository to your local machine using your terminal or command prompt:</li>
-        <pre><code>git clone [URL_OF_THE_REPO]</code></pre>
+        <pre><code>git clone https://github.com/KhaledMowafy/todo-list.git</code></pre>
         <li>Once the repo has been cloned, navigate into the project directory:</li>
         <pre><code>cd [PROJECT_DIRECTORY]</code></pre>
         <li>Install the required node modules:</li>
