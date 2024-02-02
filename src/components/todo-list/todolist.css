@@ -40,3 +40,38 @@
     color:black;
     font-weight: 900;
 }
+.todo__item-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.todo__item-container span{
+    cursor:pointer;
+}
+.todo__icons{
+    width:30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+  .todo__item-container.fall {
+    animation: fallAway forwards 1s ease-out 1;
+    }
+
+  @keyframes fallAway {
+    0% {
+      transform: rotateZ(0deg);
+      top: 0;
+      opacity: 1;
+    }
+    25% {
+      transform: rotateZ(-15deg);
+    }
+    100% {
+      top: 300px;
+      transform: rotateZ(-5deg);
+      opacity: 0;
+    }
+  }

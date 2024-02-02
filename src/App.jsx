@@ -1,6 +1,7 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect} from 'react';
 import ToDoList from './components/todo-list/ToDoList';
 import Modal from './components/modal/modal';
+import { useLocalStorage } from './utils/useLocalStorage';
 import './App.css'
 
 export const ToDoContext = createContext()
@@ -8,9 +9,13 @@ export const ToDoContext = createContext()
 function App() {
 
 const [openModal, setOpenModal] = useState(false);
-const [toDoList, setToDoList] = useState([]);
+const [toDoList, setToDoList] = useLocalStorage('todo', [])
 
 const value = [toDoList, setToDoList]
+
+useEffect(()=>(
+ toDoList!==undefined? localStorage.setItem('todo', JSON.stringify(toDoList)): setToDoList([])
+), [toDoList])
 
   return (
     <>
@@ -18,8 +23,7 @@ const value = [toDoList, setToDoList]
       <Modal openModal={openModal} setOpenModal={setOpenModal}/>
       <div className="app__container">
         <ToDoList setOpenModal={setOpenModal}/>
-        <ToDoList/>
-      </div>
+        </div>
       </ToDoContext.Provider>
     </>
   )
