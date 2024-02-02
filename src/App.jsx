@@ -1,6 +1,6 @@
 import { useState, createContext} from 'react';
 import ToDoList from './components/todo-list/ToDoList';
-import Modal from './components/modal/modal';
+import Modal from './components/modal/Modal';
 import { useLocalStorage } from './utils/useLocalStorage';
 import './App.css'
 
