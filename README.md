@@ -1,6 +1,5 @@
   <h1>To-Do List Project</h1>
     <p>This project is a simple To-Do List application built with React and powered by Vite. It allows users to manage their daily tasks effectively.</p>
-
     <h2>Features</h2>
     <ul>
         <li>Add new tasks to the to-do list</li>
@@ -9,7 +8,6 @@
         <li>Delete tasks from the list</li>
         <li>Persist tasks between sessions using local storage</li>
     </ul>
-
     <h2>Technologies Used</h2>
     <ul>
         <li>React for the front-end UI</li>
@@ -17,7 +15,6 @@
         <li>useState and useContext hooks for state management</li>
         <li>Custom hooks (useLocalStorage) for persisting state to local storage</li>
     </ul>
-
     <h2>Running the Project Locally</h2>
     <p>To get the project up and running on your local machine, follow these steps:</p>
     <ol>
