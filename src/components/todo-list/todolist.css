@@ -1,0 +1,42 @@
+.ToDo{
+    width:35%;
+}
+.ToDo__container{
+    background-color: white;
+    padding:30px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.ToDo__container-list{
+    background: linear-gradient(45deg, var(--title-color) 0%, var(--container-color-dark) 100%);
+    padding:10px;
+    width:100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ToDo__list-empty{
+    color: var(--body-color);
+}
+.add__item{
+    background-color: white;
+    border-radius: 50%;
+    width:5%;
+    height: auto;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.add__item span{
+    color:black;
+    font-weight: 900;
+}

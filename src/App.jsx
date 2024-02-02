@@ -1,33 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, createContext } from 'react';
+import ToDoList from './components/todo-list/ToDoList';
+import Modal from './components/modal/modal';
 import './App.css'
 
+export const ToDoContext = createContext()
+
 function App() {
-  const [count, setCount] = useState(0)
+
+const [openModal, setOpenModal] = useState(false);
+const [toDoList, setToDoList] = useState([]);
+
+const value = [toDoList, setToDoList]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ToDoContext.Provider value={value}>
+      <Modal openModal={openModal} setOpenModal={setOpenModal}/>
+      <div className="app__container">
+        <ToDoList setOpenModal={setOpenModal}/>
+        <ToDoList/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </ToDoContext.Provider>
     </>
   )
 }
