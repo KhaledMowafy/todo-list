@@ -1,6 +1,7 @@
 .ToDo{
     width:35%;
 }
+
 .ToDo__container{
     background-color: white;
     padding:30px;
@@ -74,4 +75,15 @@
       transform: rotateZ(-5deg);
       opacity: 0;
     }
+  }
+  @media only screen and (max-width: 768px) {
+    .ToDo{
+      width:100%;
+  }
+  .ToDo__container{
+    padding:0;
+  }
+  .ToDo__container-list{
+    padding:0
+  }
   }

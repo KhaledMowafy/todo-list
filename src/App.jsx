@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect} from 'react';
+import { useState, createContext} from 'react';
 import ToDoList from './components/todo-list/ToDoList';
 import Modal from './components/modal/modal';
 import { useLocalStorage } from './utils/useLocalStorage';
@@ -13,9 +13,7 @@ const [toDoList, setToDoList] = useLocalStorage('todo', [])
 
 const value = [toDoList, setToDoList]
 
-useEffect(()=>(
- toDoList!==undefined? localStorage.setItem('todo', JSON.stringify(toDoList)): setToDoList([])
-), [toDoList])
+
 
   return (
     <>
